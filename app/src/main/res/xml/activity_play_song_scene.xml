@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe />
+        <OnClick />
+        <OnClick motion:targetId="@+id/imageView4" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/imageView3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            motion:layout_constraintHorizontal_bias="0.955"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            motion:layout_constraintStart_toEndOf="@+id/txtNameSong"
+            motion:layout_constraintTop_toTopOf="@+id/txtNameSong" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.049"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/txtNameSong" />
+        <Constraint
+            android:layout_height="13dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="253dp"
+            android:id="@+id/seekBar"
+            motion:layout_constraintHorizontal_bias="0.809"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="104dp" />
+        <Constraint
+            android:layout_height="98dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.05"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="94dp"
+            android:id="@+id/imageView4"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.968" />
+        <Constraint
+            android:layout_height="57dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintHorizontal_bias="0.796"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="58dp"
+            motion:layout_constraintTop_toBottomOf="@+id/seekBar"
+            android:id="@+id/Play" />
+        <Constraint
+            android:layout_height="338dp"
+            android:layout_width="365dp"
+            android:id="@+id/textView3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/txtNameSinger"
+            android:layout_marginTop="28dp" />
+    </ConstraintSet>
+</MotionScene>
